@@ -7,11 +7,12 @@ resource "google_storage_bucket" "terraform-bucket" {
 resource "google_compute_instance" "web-server" {
   machine_type = "e2.micro"
   name         = "web-server"
-  zone         = "${var.gcp_region}--c"
+  zone         = "us-west1"
+
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-cloud/debian-11"
     }
   }
   network_interface {
