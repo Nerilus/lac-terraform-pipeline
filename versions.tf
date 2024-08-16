@@ -10,7 +10,7 @@ terraform {
 
 
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "devnerilus"
     workspaces {
       name = "lac-terraform-pipeline"
