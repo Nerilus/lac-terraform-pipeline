@@ -7,8 +7,13 @@ terraform {
       version = "5.14.0"
     }
   }
-  backend "local" {
-    path = "terraform/state/local.tfsate"
 
+
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "devnerilus"
+    workspaces {
+      name = "lac-terraform-pipeline"
+    }
   }
 }
